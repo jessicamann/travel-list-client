@@ -1,0 +1,32 @@
+.Place-box{
+  width:40%;
+  height:200px;
+  float: left;
+  background-color:white; 
+  margin:25px 15px;
+  border-radius:5px;
+}
+
+.box-color-peach{
+  background-color: #EBA39E;
+}
+
+.Place-name{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Place-location{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Place-description{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Place {
+  text-align: left;
+  padding-left: 10px;
+}
