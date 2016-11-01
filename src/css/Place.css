@@ -30,3 +30,11 @@
   text-align: left;
   padding-left: 10px;
 }
+
+.travel-form {
+  width:80%;
+  height:200px;
+  float: center;
+  background-color:yellow; 
+  border-radius: 20%;
+}
