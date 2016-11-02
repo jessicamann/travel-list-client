@@ -12,12 +12,12 @@ class TravelForm extends React.Component {
 
   render() {
     return (
-      <form className='travel-form'>
-        <input type='text' name='name-field' placeholder='Name of the place?' 
+      <form className='travel-form' name='travel-form'>
+        <input type='text' ref='name' placeholder='Name of the place?' value={this.state.name ? this.state.name : ''}
           onChange={(input) => this.setState({name: input.target.value})} />
-        <input type='text' name='location-field' placeholder='Where is it?' 
+        <input type='text' ref='location' placeholder='Where is it?' value={this.state.location ? this.state.location : ''}
           onChange={(input) => this.setState({location: input.target.value})} />
-        <input type='text' name='description-field' placeholder='Some description?' 
+        <input type='text' ref='description' placeholder='Some description?' value={this.state.description ? this.state.description : ''}
           onChange={(input) => this.setState({description: input.target.value})} />
         <input type='submit' value='Send' onClick={(e) => this.handleClick(e)} />
       </form>
@@ -27,6 +27,11 @@ class TravelForm extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.props.onChange(this.state);
+    this.clearForm();
+  }
+
+  clearForm() {
+    this.setState({name: null, location: null, description: null})
   }
 }
 

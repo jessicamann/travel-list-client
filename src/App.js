@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super();
 
-    /* TODO: mvp storage solution... Should be in a simple db or a file */
+    /* TODO: temp storage solution... Should be in a simple db or a file */
     this.state = {
       places: [
         {name: 'New York', location: 'New York', description: 'A place in eastern US', id: 1},
