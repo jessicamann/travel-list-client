@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Place extends React.Component {
+class PlaceBox extends React.Component {
   render() {
     return (
       <div className='Place-box box-color-peach'>
@@ -12,4 +12,4 @@ class Place extends React.Component {
   }
 }
 
-export default Place
+export default PlaceBox

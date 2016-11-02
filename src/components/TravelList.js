@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Place from './Place';
+import PlaceBox from './PlaceBox';
 
 class TravelList extends Component {
   render() {
@@ -12,7 +12,7 @@ class TravelList extends Component {
 
   getPlacesComponents(places){
     return ( 
-      places.map((place) => <Place name={place.name} location={place.location} description={place.description} />)
+      places.map((place) => <PlaceBox name={place.name} location={place.location} description={place.description} key={place.id}/>)
     );
   }
 }
