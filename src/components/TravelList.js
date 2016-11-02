@@ -4,7 +4,7 @@ import PlaceBox from './PlaceBox';
 class TravelList extends Component {
   render() {
     return (
-      <div className="List">
+      <div>
         {this.getPlacesComponents(this.props.places)}
       </div>
     );

@@ -12,7 +12,7 @@ class TravelForm extends React.Component {
 
   render() {
     return (
-      <form className='travel-form' name='travel-form'>
+      <form className='travel-form'>
         <input type='text' ref='name' placeholder='Name of the place?' value={this.state.name ? this.state.name : ''}
           onChange={(input) => this.setState({name: input.target.value})} />
         <input type='text' ref='location' placeholder='Where is it?' value={this.state.location ? this.state.location : ''}

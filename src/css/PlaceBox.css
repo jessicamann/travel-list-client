@@ -1,21 +1,3 @@
-.Place-box{
-  width:40%;
-  height:200px;
-  float: left;
-  background-color:white; 
-  margin:25px 15px;
-  border-radius:5px;
-}
-
-.box{
-  width:45%;
-  height:200px;
-  float:left;
-  background-color:white; 
-  margin:25px 15px;
-  border-radius:5px;
-}
-
 .dashed-box {
   width:87%;
   height:87%;
@@ -25,46 +7,10 @@
   border-radius:5px;  
 }
 
-.box1{
-  background-color: #EBA39E;
-}
-
-.shadow1, .shadow2, .shadow3,.shadow4,.shadow5,.shadow6,.shadow7,.shadow8{
-  position:relative;
-}
-.shadow1,.shadow2,.shadow3,.shadow4,.shadow5,.shadow6,.shadow7,.shadow8{
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
-}
-
-.box-color-peach{
-  background-color: #EBA39E;
-}
-
-.Place-name{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.Place-location{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.Place-description{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.Place {
-  text-align: left;
-  padding-left: 10px;
-}
-
 .travel-form {
   width:100%;
   height:200px;
   float: center;
-  background-color:#ffffe3; 
   border-radius: 5%;
 }
 

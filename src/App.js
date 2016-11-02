@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import './css/PlaceBox.css';
+import './css/boxes.css'
 import TravelList from './components/TravelList';
 import TravelForm from './components/TravelForm';
 
