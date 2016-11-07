@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PlaceBox extends React.Component {
+class Place extends React.Component {
   render() {
     return (
       <div className='box'>
@@ -18,4 +18,4 @@ class PlaceBox extends React.Component {
   }
 }
 
-export default PlaceBox
+export default Place

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import './css/PlaceBox.css';
-import './css/boxes.css'
-import TravelList from './components/TravelList';
-import TravelForm from './components/TravelForm';
+import './css/addPlaceForm.css';
+import './css/place.css'
+import ToVisitList from './components/ToVisitList';
+import AddPlaceForm from './components/AddPlaceForm';
 
 class App extends Component {
   constructor() {
@@ -23,8 +23,8 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Travel List</h2>
-        <TravelForm onChange={(newPlace) => this.handleClick(newPlace)}/>
-        <TravelList places={this.state.places}/>
+        <AddPlaceForm onChange={(newPlace) => this.handleClick(newPlace)}/>
+        <ToVisitList places={this.state.places}/>
       </div>
     );
   }
