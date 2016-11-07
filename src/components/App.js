@@ -30,12 +30,8 @@ class App extends Component {
   }
 
   handleClick(newPlace) {
-    const newList = this.state.places.concat({
-      name: newPlace.name,
-      location: newPlace.location,
-      description: newPlace.description,
-      id: this.state.places.length+1  
-    });
+    newPlace.id=this.state.places.length+1;
+    const newList = this.state.places.concat(newPlace);
 
     this.setState({places: newList});
   }
