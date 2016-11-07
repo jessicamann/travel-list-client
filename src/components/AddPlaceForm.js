@@ -13,13 +13,13 @@ class AddPlaceForm extends React.Component {
   render() {
     return (
       <form className='travel-form'>
-        <input type='text' placeholder='Name of the place?' value={this.state.name ? this.state.name : ''}
+        <input type='text' className="text-field" placeholder='Name of the place?' value={this.state.name ? this.state.name : ''}
           onChange={(input) => this.setState({name: input.target.value})} />
-        <input type='text' placeholder='Where is it?' value={this.state.location ? this.state.location : ''}
+        <input type='text' className="text-field"  placeholder='Where is it?' value={this.state.location ? this.state.location : ''}
           onChange={(input) => this.setState({location: input.target.value})} />
-        <input type='text' placeholder='Some description?' value={this.state.description ? this.state.description : ''}
+        <input type='text' className="text-field"  placeholder='Some description?' value={this.state.description ? this.state.description : ''}
           onChange={(input) => this.setState({description: input.target.value})} />
-        <input type='submit' value='Send' onClick={(e) => this.handleClick(e)} />
+        <input type='submit' className="button" value='Send' onClick={(e) => this.handleClick(e)} />
       </form>
     );
   }

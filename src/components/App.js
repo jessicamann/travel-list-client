@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './css/App.css';
-import './css/addPlaceForm.css';
-import './css/place.css'
-import ToVisitList from './components/ToVisitList';
-import AddPlaceForm from './components/AddPlaceForm';
+import '../css/App.css';
+import '../css/addPlaceForm.css';
+import '../css/place.css'
+import ToVisitList from './ToVisitList';
+import AddPlaceForm from './AddPlaceForm';
 
 class App extends Component {
   constructor() {
