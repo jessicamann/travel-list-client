@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "./initdb.sh && nodemon index.js"
   },
   "author": "jmann",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "pg": "9.9.5",
+    "pg-promise": "^3.2.3",
+    "bluebird": "^3.3.4"
   }
 }
