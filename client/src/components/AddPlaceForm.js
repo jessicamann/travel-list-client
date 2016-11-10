@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/addPlaceForm.css';
 
 class AddPlaceForm extends React.Component {
   constructor() {

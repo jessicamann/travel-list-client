@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../css/App.css';
-import '../css/addPlaceForm.css';
-import '../css/place.css'
 import ToVisitList from './ToVisitList';
 import AddPlaceForm from './AddPlaceForm';
 

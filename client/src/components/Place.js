@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/place.css'
 
 class Place extends React.Component {
   render() {
