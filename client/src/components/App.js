@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import '../css/App.css';
 import '../css/addPlaceForm.css';
 import '../css/place.css'
@@ -6,16 +7,15 @@ import ToVisitList from './ToVisitList';
 import AddPlaceForm from './AddPlaceForm';
 
 class App extends Component {
+  componentDidMount() {
+    this.getDefaultPlaces();
+  }
+
   constructor() {
     super();
 
-    /* TODO: temp storage solution... Should be in a simple db or a file */
     this.state = {
-      places: [
-        {name: 'New York', location: 'New York', description: 'A place in eastern US', id: 1},
-        {name: 'Chicago', location: 'Illinois', description: 'A place in centra US', id: 2},
-        {name: 'San Francisco', location: 'Calinfornia', description: 'A place in western US', id: 3}
-      ]
+      places: []
     };
   }
 
@@ -36,6 +36,16 @@ class App extends Component {
     this.setState({places: newList});
   }
 
+  getDefaultPlaces() {
+      axios.get("http://localhost:4000/api/places")
+        .then(response => {
+          this.setState({places: response.data.data})
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      return [];
+    }
 }
 
 export default App;
