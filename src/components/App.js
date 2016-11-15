@@ -35,7 +35,9 @@ class App extends Component {
   }
 
   getDefaultPlaces() {
-      const baseUrl = process.env.API_BASE_URL;
+    //todo: make this work!!
+//      var baseUrl = process.env.API_BASE_URL || 'http://localhost:5000';
+      var baseUrl = "https://travel-app-example-api.herokuapp.com";
       axios.get(baseUrl + '/places')
         .then(response => {
           this.setState({places: response.data.data})
