@@ -35,9 +35,8 @@ class App extends Component {
   }
 
   getDefaultPlaces() {
-     var config = require('../env.json')[process.env.ENV || 'dev'];
-
-      axios.get(config.API_BASE_URL + '/places')
+      const baseUrl = process.env.API_BASE_URL || 'http://localhost:5000';
+      axios.get(baseUrl + '/places')
         .then(response => {
           this.setState({places: response.data.data})
         })
