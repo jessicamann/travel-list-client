@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   getDefaultPlaces() {
-      const baseUrl = process.env.API_BASE_URL || 'http://localhost:5000';
+      const baseUrl = process.env.API_BASE_URL;
       axios.get(baseUrl + '/places')
         .then(response => {
           this.setState({places: response.data.data})
