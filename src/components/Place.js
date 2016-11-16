@@ -11,7 +11,7 @@ class Place extends React.Component {
         <h2>{this.props.name}</h2>
         <h3>{this.props.location}</h3>
         <h3>{this.props.description}</h3>
-        <a className="delete" onClick={(e) => this.props.onDelete(this.props.id)}>delete</a>
+        <a className="delete" onClick={(e) => this.props.onDelete()}>delete</a>
         <div className='box_ribbon' />
       </div>
     );		

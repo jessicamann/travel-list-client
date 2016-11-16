@@ -19,7 +19,7 @@ class ToVisitList extends Component {
           description={place.description}
           id={place.id}
           key={place.id}
-          onDelete={(id) => this.props.onClick(id)}
+          onDelete={(e) => this.props.onClick(place.id)}
         />
       )
     );
