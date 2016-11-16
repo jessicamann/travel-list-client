@@ -46,7 +46,16 @@ class App extends Component {
   }
 
   handleDelete(id) {
-    console.log(id);
+    axios.delete(this.baseUrl + 'delete', {
+      id: id
+    })
+    .then(response => {
+      // do i need one?
+    })
+    .catch(error => {
+      alert('unable to delete this place');
+      console.log(error);
+    })
   }
 
   getAllPlaces() {
