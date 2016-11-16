@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Travel List</h2>
+        <h2 className="title">Travel Bucket List</h2>
         <AddPlaceForm onChange={(newPlace) => this.handleClick(newPlace)}/>
         <ToVisitList places={this.state.places}/>
       </div>
