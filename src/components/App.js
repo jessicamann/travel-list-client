@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   handleDelete(id) {
-    axios.delete(this.baseUrl + 'delete', {
+    axios.delete(this.baseUrl + '/delete', {
       id: id
     })
     .then(response => {
