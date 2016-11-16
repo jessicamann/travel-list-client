@@ -20,7 +20,7 @@ class AddPlaceForm extends React.Component {
           onChange={(input) => this.setState({location: input.target.value})} />
         <input type='text' className="text-field"  placeholder='Some description?' value={this.state.description ? this.state.description : ''}
           onChange={(input) => this.setState({description: input.target.value})} />
-        <input type='submit' className="button" value='Send' onClick={(e) => this.handleClick(e)} />
+        <input type='submit' className="button" value='Add' onClick={(e) => this.handleClick(e)} />
       </form>
     );
   }
