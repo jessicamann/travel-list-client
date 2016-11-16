@@ -9,8 +9,8 @@ class Place extends React.Component {
       	  <p>Put an image here!</p>
       	</div>
         <h2>{this.props.name}</h2>
-        <h3>Location: {this.props.location}</h3>
-        <h3>Description: {this.props.description}</h3>
+        <h3>{this.props.location}</h3>
+        <h3>{this.props.description}</h3>
         <div className='box_ribbon' />
       </div>
     );		
