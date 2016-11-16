@@ -6,12 +6,15 @@ import AddPlaceForm from './AddPlaceForm';
 
 class App extends Component {
   componentDidMount() {
-    this.getDefaultPlaces();
+    this.getAllPlaces();
   }
 
   constructor() {
     super();
 
+    //todo: figure out how to make the environment variable work for a view application
+//    this.baseUrl = process.env.API_BASE_URL || 'http://localhost:5000'; //local use
+    this.baseUrl = "https://travel-app-example-api.herokuapp.com";
     this.state = {
       places: []
     };
@@ -28,21 +31,27 @@ class App extends Component {
   }
 
   handleClick(newPlace) {
-    newPlace.id=this.state.places.length+1;
-    const newList = this.state.places.concat(newPlace);
-
-    this.setState({places: newList});
+    axios.post(this.baseUrl + '/add', {
+      name: newPlace.name,
+      location: newPlace.location,
+      description: newPlace.description
+    })
+    .then(response => {
+      this.getAllPlaces(); //todo: is another database call excessive? I don't expect a lot of traffic or data though...
+    })
+    .catch(error => {
+      alert('unable to add this place');
+      console.log(error);
+    });
   }
 
-  getDefaultPlaces() {
-    //todo: make this work!!
-//      var baseUrl = process.env.API_BASE_URL || 'http://localhost:5000';
-      var baseUrl = "https://travel-app-example-api.herokuapp.com";
-      axios.get(baseUrl + '/places')
+  getAllPlaces() {
+      axios.get(this.baseUrl + '/places')
         .then(response => {
-          this.setState({places: response.data.data})
+          this.setState({places: response.data.data.reverse()})
         })
         .catch(error => {
+          alert('unable to retrieve all places');
           console.log(error);
         });
       return [];
