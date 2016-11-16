@@ -46,11 +46,11 @@ class App extends Component {
   }
 
   handleDelete(id) {
-    axios.delete(this.baseUrl + '/delete', {
+    axios.post(this.baseUrl + '/delete', {
       id: id
     })
     .then(response => {
-      // do i need one?
+      this.getAllPlaces();
     })
     .catch(error => {
       alert('unable to delete this place');
