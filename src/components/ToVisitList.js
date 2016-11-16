@@ -12,8 +12,21 @@ class ToVisitList extends Component {
 
   getPlacesComponents(places){
     return ( 
-      places.map((place) => <Place name={place.name} location={place.location} description={place.description} key={place.id}/>)
+      places.map((place) =>
+        <Place
+          name={place.name}
+          location={place.location}
+          description={place.description}
+          id={place.id}
+          key={place.id}
+          onDelete={(id) => this.props.onClick(id)}
+        />
+      )
     );
+  }
+
+  handleDelete(id) {
+      console.log(id);
   }
 }
 

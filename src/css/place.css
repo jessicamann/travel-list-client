@@ -27,6 +27,13 @@
     margin-top: 15px;
 }
 
+.delete {
+    color: #8c8c8c;
+    text-decoration: underline;
+    margin: 2px;
+    float: right;
+}
+
 p{ 
     margin-top: 15px;
     text-align: justify;

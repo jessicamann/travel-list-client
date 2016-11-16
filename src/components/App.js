@@ -24,13 +24,13 @@ class App extends Component {
     return (
       <div className="App">
         <h2 className="title">Travel Bucket List</h2>
-        <AddPlaceForm onChange={(newPlace) => this.handleClick(newPlace)}/>
-        <ToVisitList places={this.state.places}/>
+        <AddPlaceForm onChange={(newPlace) => this.handleAdd(newPlace)}/>
+        <ToVisitList places={this.state.places} onClick={(id) => this.handleDelete(id)}/>
       </div>
     );
   }
 
-  handleClick(newPlace) {
+  handleAdd(newPlace) {
     axios.post(this.baseUrl + '/add', {
       name: newPlace.name,
       location: newPlace.location,
@@ -43,6 +43,10 @@ class App extends Component {
       alert('unable to add this place');
       console.log(error);
     });
+  }
+
+  handleDelete(id) {
+    console.log(id);
   }
 
   getAllPlaces() {
